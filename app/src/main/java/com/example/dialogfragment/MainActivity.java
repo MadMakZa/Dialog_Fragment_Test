@@ -20,5 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onClickOpenDialog(View view){
         //метод нажатия на кнопку
+        CustomDialogFragment dialog = new CustomDialogFragment();
+        dialog.show(getFragmentManager(), "custom");
     }
 }
