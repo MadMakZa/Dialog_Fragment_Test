@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         MainFragment fragment = new MainFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.container, fragment, "MainFragment");
+        transaction.commit();
 
     }
     public void onClickOpenDialog(View view){
