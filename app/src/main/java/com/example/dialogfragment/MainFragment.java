@@ -2,6 +2,7 @@ package com.example.dialogfragment;
 
 import android.app.Fragment;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.w3c.dom.Text;
 
 
 public class MainFragment extends Fragment {
@@ -34,6 +34,9 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: opening dialog");
 
+                MyCustomDialog dialog = new MyCustomDialog();
+                dialog.setTargetFragment(MainFragment.this, 1);
+                dialog.show(getFragmentManager(), "MyCustomDialog");
             }
         });
 
